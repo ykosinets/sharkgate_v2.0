@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+
+<body class="page-caching" style="opacity: 0">
+${require('../components/scrollbar.html').default}
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title">
+          <span class="icon icon-caching"></span>
+          <span>
+            Caching
+            <span class="p d-block">Manage caching settings for your website</span>
+          </span>
+        </h3>
+      </div>
+
+      <div class="section-body text-grey">
+        <div class="section-body option">
+          <h3>Purge Cache:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Clear cached files to force Cloudflare to fetch a fresh version of those files from your web server. You
+                can purge files selectively or all at once.
+                <br>
+                <br>
+                <strong>Note:</strong> Purging the cache may temporarily degrade performance for your website and
+                increase load on your origin.
+                <br>
+                While purging files, tags or hosts, provide comma-separated URL(s).
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="select-wrapper">
+                <select name="parents" id="cache-purge" class="form-control">
+                  <option value="0" selected disabled>
+                    What to purge
+                  </option>
+                  <option value="1">Sample option</option>
+                  <option value="2">Another sample</option>
+                  <option value="3" disabled>Disabled option</option>
+                </select>
+                <span class="caret"></span>
+              </div>
+              <div class="clearfix"></div>
+              <button type="button" class="btn btn-primary btn-bordered">Purge</button>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Development Mode:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Temporarily bypass our cache allowing you to see changes to your origin server in realtime.
+
+                <strong>Note:</strong> Enabling this feature can significantly increase origin server load. Development
+                mode does not purge the cache so files will need to be purged after development mode expires.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox4" type="checkbox">
+                <label for="checkbox4"><span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Always Online:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                If your server goes down, Cloudflare will serve your website’s static pages from our cache.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox5" type="checkbox">
+                <label for="checkbox5"><span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Browser Cache Expiration:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Determine the length of time Cloudflare instructs a visitor’s browser to cache files. During this
+                period, the browser loads the files from its local cache, speeding up page loads.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="select-wrapper">
+                <select name="keep" id="caching-expiration" class="form-control">
+                  <option value="0" selected disabled>4 Hours</option>
+                  <option value="1">Sample option</option>
+                  <option value="2">Another sample</option>
+                  <option value="3" disabled>Disabled option</option>
+                </select>
+                <span class="caret"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Caching Level:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Determine how much of your website’s static content you want Cloudflare to cache. Increased caching can
+                speed up page load time.
+              </p>
+            </div>
+
+
+            <div class="col-xl-8">
+              <div class="select-wrapper">
+                <select name="keep" id="caching-type" class="form-control">
+                  <option value="0" selected disabled>Aggressive</option>
+                  <option value="1">Sample option</option>
+                  <option value="2">Another sample</option>
+                  <option value="3" disabled>Disabled option</option>
+                </select>
+                <span class="caret"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+      </div>
+    </section>
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

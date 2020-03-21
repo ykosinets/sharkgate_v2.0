@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+<body class="menu-close menu-expanded" style="opacity: 0">
+
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"><span class="sr-only">Press "E" to expand the menu</span></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-speedometer"></span>Typography examples</h3>
+      </div>
+      <div class="section-body">
+        <div class="section-body">
+          <h1>Heading text</h1>
+          <h2>Heading text</h2>
+          <h3>Heading text</h3>
+          <h4>Heading text</h4>
+          <h5>Heading text</h5>
+          <h6>Heading text</h6>
+        </div>
+
+        <div class="section-body">
+          <p>
+            Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Accusantium aut corporis
+            <i>dignissimos distinctio</i> ducimus ea error
+            <mark>et impedit minima mollitia</mark>
+            nam nulla, <a href="#">optio possimus</a> provident
+            <u>quibusdam ratione reiciendis</u>
+            <small>veniam voluptate.</small>
+          </p>
+        </div>
+        ${require('../components/section/footer.html').default}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-dashboard"></span>Alerts</h3>
+      </div>
+
+      <div class="section-body">
+        ${require('../components/alert/primary.html').default}
+        <br>
+        ${require('../components/alert/success.html').default}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-crypto"></span>Map</h3>
+      </div>
+
+      <div class="section-body">
+        <div class="row">
+          <div class="col-lg-6 col-xxl-4">
+            <ul class="map-list list-unstyled">
+              <li><span class="name">China</span><span class="value">137</span></li>
+              <li><span class="name">Japan</span><span class="value">137</span></li>
+              <li><span class="name">United States (US)</span><span class="value">137</span></li>
+              <li><span class="name">Bulgaria</span><span class="value">137</span></li>
+              <li><span class="name">Singapore</span><span class="value">137</span></li>
+              <li><span class="name">Other EU</span><span class="value">137</span></li>
+              <li><span class="name">France</span><span class="value">137</span></li>
+              <li><span class="name">Thailand</span><span class="value">137</span></li>
+              <li><span class="name">Romania</span><span class="value">137</span></li>
+              <li><span class="name">Estonia</span><span class="value">137</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 col-xxl-8">
+            <div class="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-crypto"></span>Tables</h3>
+      </div>
+
+      <div class="section-body">
+        ${require('../components/table/table.html').default}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-dashboard"></span>Tabs and multiple controls table</h3>
+      </div>
+
+      <div class="section-body">
+        ${require('../components/tabs/table-1.html').default}
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-dashboard"></span>Controls</h3>
+      </div>
+
+      <div class="section-body">
+        <div class="toggle-switcher">
+          <input id="checkbox" type="checkbox">
+          <label for="checkbox">title for checkbox <span class="switcher"></span></label>
+        </div>
+
+        <br>
+
+        <a href="#" class="btn btn-rounded-primary">Save Changes</a>
+
+        <br>
+
+        <div class="select-wrapper">
+          <select title="" name="select" id="select" class="form-control">
+            <option value="1" disabled selected>Keep Path</option>
+            <option value="1">Sample option</option>
+            <option value="2">Another sample</option>
+            <option value="3" disabled>Disabled option</option>
+          </select>
+
+          <span class="caret"></span>
+        </div>
+
+        <br>
+      </div>
+
+      ${require('../components/section/footer.html').default}
+    </section>
+
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

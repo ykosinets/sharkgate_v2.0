@@ -1,0 +1,35 @@
+.scrollbar {
+  position: fixed;
+  pointer-events: none;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  width: 5px;
+  overflow: hidden;
+  z-index: $zindex-dropdown;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &-track {
+    position: absolute;
+    top: var(--scrollbar-position);
+    left: 0;
+    background: $black;
+    min-height: 50px;
+    max-height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    transform: translate(0, var(--n-scrollbar-position));
+    opacity: 0;
+    transition: .3s opacity .5s ease-in-out;
+  }
+
+  &-active {
+    .scrollbar-track {
+      opacity: .3;
+      transition: .3s opacity ease-in-out;
+    }
+  }
+}

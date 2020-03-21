@@ -1,0 +1,138 @@
+.page-security {
+  .btn-cloudflare,
+  .btn-sharkgate {
+    min-width: 220px;
+    font-weight: 600;
+    @include interpolate(font-size, md, lg, 18px, 26px);
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    line-height: 1;
+    padding: .25em .75em .25em 1em;
+    position: relative;
+    margin: .25em;
+
+    &:not(.active) {
+      background: $inactive;
+      border-color: $inactive;
+    }
+
+    img {
+      position: absolute;
+      width: auto;
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-cloudflare {
+    padding-left: 2.75em;
+
+    img {
+      height: .75em;
+      left: .75em;
+      top: .3em;
+    }
+  }
+
+  .btn-sharkgate {
+    padding-left: 1.75em;
+
+    img {
+      height: 1em;
+      left: 1em;
+      top: .25em;
+    }
+  }
+
+  .btn-warning:not(:disabled):not(.disabled).active {
+    background: $warning;
+    border-color: $warning;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled).active {
+    background: $primary;
+    border-color: $primary;
+  }
+
+  .tab-pane {
+    &#pills-access{
+      padding-top: 20px;
+    }
+
+    .form-line {
+      display: flex;
+      width: 100%;
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+      }
+
+      .select2 {
+        width: 100% !important;
+      }
+    }
+
+    .form-group {
+      padding: 0 15px;
+
+      @include media-breakpoint-down(xl) {
+        padding: 0 5px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding: 0 15px;
+      }
+    }
+
+    .w-40 {
+      min-width: 40%;
+    }
+
+    .w-30 {
+      min-width: 30%;
+    }
+
+    .w-20 {
+      min-width: 20%;
+    }
+
+    .w-10 {
+      min-width: 10%;
+    }
+  }
+
+  table {
+    .table-select .form-control {
+      min-width: 200px;
+      padding: 0;
+    }
+
+    small {
+      color: $inactive;
+      display: block;
+    }
+  }
+
+  a.nav-link span {
+    display: inline;
+  }
+
+  .data-table-simple {
+    .selection, .selection span {
+      display: block;
+      line-height: 38px;
+    }
+  }
+
+  .nav-pills-rise-wrapper,
+  .nav-pills-rise {
+    width: 100%;
+  }
+}

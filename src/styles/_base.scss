@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  outline: none !important;
+}
+
+//css vars
+:root {
+  --gap: 50px;
+  --sidebar-width: 340px;
+  --n-sidebar-width: -340px;
+  --card-padding: 45px;
+  --sidebar-collapse-width: 75px;
+  --n-sidebar-collapse-width: -75px;
+  --page-content-padding-x: 100px;
+  --page-content-margin-y: 60px;
+
+  @include media-breakpoint-down(xl) {
+    --card-padding: 40px;
+    --page-content-padding-x: 60px;
+    --page-content-margin-y: 40px;
+    --sidebar-width: 300px;
+    --n-sidebar-width: -300px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    --card-padding: 30px;
+    --sidebar-width: 250px;
+    --n-sidebar-width: -250px;
+    --page-content-padding-x: 15px;
+    --page-content-margin-y: 15px;
+  }
+
+  @include media-breakpoint-down(md) {
+    --card-padding: 30px;
+    --sidebar-width: 200px;
+    --n-sidebar-width: -200px;
+    --page-content-padding-x: 15px;
+    --page-content-margin-y: 15px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    --card-padding: 15px;
+    --sidebar-width: 250px;
+    --n-sidebar-width: -250px;
+  }
+}

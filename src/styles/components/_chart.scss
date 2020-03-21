@@ -1,0 +1,26 @@
+.chart {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  &-wrapper {
+    position: relative;
+    margin: 20px 0;
+
+    &:after {
+      content: '';
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 50%;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
+  canvas{
+    width: 100%;
+    height: auto;
+  }
+}

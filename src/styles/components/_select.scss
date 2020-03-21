@@ -1,0 +1,223 @@
+.table-select .caret,
+.select-wrapper .caret {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 11px solid $inactive;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: none;
+  transform: translate(0, -50%);
+  pointer-events: none;
+  transition: .2s transform ease-in-out;
+}
+
+.table-select .form-control:focus + .caret {
+  transform: translate(0, -50%) scale(-1);
+}
+
+.table-select {
+  position: relative;
+
+  .form-control {
+    opacity: 0;
+    pointer-events: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .select2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    padding-right: 50px;
+
+    .selection, .selection span {
+      display: block;
+      line-height: 50px;
+    }
+  }
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  min-width: 270px;
+
+  .form-control {
+    opacity: 0;
+    pointer-events: none;
+    padding-right: 30px;
+    padding-left: 20px;
+    height: 50px;
+    border-radius: $controls-radius;
+    border: 1px solid $inactive;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: $saira;
+    font-weight: 500;
+    color: $grey;
+  }
+
+  .select2-container--open + .caret {
+    transform: translate(0, -50%) scale(-1);
+  }
+
+  &.text-primary {
+    @include generate-select($primary);
+
+    .form-control {
+      line-height: 44px;
+    }
+  }
+
+  .select2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+
+    &-selection {
+      display: block;
+      width: 100%;
+      height: 50px;
+      line-height: 46px;
+      padding-right: 40px;
+      padding-left: 20px;
+      border-radius: $controls-radius;
+      border: 1px solid $inactive;
+      background: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      font-family: $saira;
+      font-weight: 500;
+      color: $grey;
+
+      &:focus {
+        border-color: #74c4fd;
+        outline: 0;
+        box-shadow: 0 5px 17px 0 rgba(141, 207, 253, 0.5);
+      }
+    }
+  }
+}
+
+.select2 {
+  &-container {
+    z-index: 20;
+
+    &--disabled {
+      color: $inactive;
+    }
+  }
+
+  &-search {
+    display: none;
+  }
+
+  &-results {
+    display: block;
+  }
+
+  &-dropdown {
+    display: block;
+    box-shadow: 0 0 var(--section-shadow-size) 0 rgba($section-background-color, .45);
+    background: $white;
+    border-radius: 10px;
+    margin-top: 3px;
+    min-width: 230px;
+
+    ul {
+      list-style: none;
+      width: 100%;
+      margin: 0;
+      padding: 10px 0;
+
+      li {
+        height: 40px;
+        line-height: 38px;
+        padding-right: 30px;
+        padding-left: 20px;
+        cursor: pointer;
+        will-change: background;
+        white-space: nowrap;
+        transition: .2s background ease-in-out;
+
+        &.select2-results__option--highlighted,
+        &:not([aria-disabled="true"]):hover {
+          background: $page-content-background-color;
+        }
+
+        &[aria-disabled="true"] {
+          cursor: default;
+          opacity: .5;
+        }
+
+        &:first-child[aria-disabled="true"] {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .select2-selection__rendered {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.select-wrapper-sm {
+  min-width: 0;
+  width: 100%;
+
+  .form-control {
+    height: 38px;
+  }
+
+  .select2-selection {
+    height: 38px;
+    line-height: 36px;
+  }
+}
+
+.table-select {
+  .form-control {
+    cursor: pointer;
+    @extend .p;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    text-decoration: none !important;
+    min-width: 120px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: -.75rem 0;
+    padding: .75rem 60px .75rem 0;
+    color: $grey;
+    font-family: $eurostile;
+
+    &:disabled {
+      pointer-events: none;
+      color: lighten($grey, 20%);
+    }
+
+    option:disabled {
+      color: lighten($inactive, .4);
+    }
+  }
+}

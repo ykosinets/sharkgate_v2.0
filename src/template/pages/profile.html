@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+
+<body class="page-profile" style="opacity: 0">
+${require('../components/scrollbar.html').default}
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-user-circle"></span>Edit Profile</h3>
+      </div>
+
+      <div class="section-body">
+        <form action="/" autocomplete="on">
+
+          <div class="avatar-preview-wrapper">
+            <input type="file" id="avatar">
+            <label for="avatar"></label>
+            <img class="avatar-preview" src="" alt="avatar preview">
+          </div>
+
+          <div class="user-description">
+            <span>Username</span>/<span>Email</span>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 material-group">
+              <input type="text" class="material-control" placeholder="First Name" name="first_name" required="required">
+              <span class="bar"></span>
+              <label>First Name</label>
+            </div>
+
+            <div class="col-md-6 material-group">
+              <input type="text" class="material-control" placeholder="Last Name" name="last_name" required="required">
+              <span class="bar"></span>
+              <label>Last Name</label>
+            </div>
+
+            <div class="col-md-12 material-group">
+              <input type="text" class="material-control" placeholder="Company Name" name="company_name">
+              <span class="bar"></span>
+              <label>Company Name</label>
+            </div>
+
+            <div class="col-md-12 material-group">
+              <input type="text" class="material-control" placeholder="Address" name="address" required="required">
+              <span class="bar"></span>
+              <label>Address</label>
+            </div>
+
+            <div class="col-md-4 material-group">
+              <input type="text" class="material-control" placeholder="City" name="city" required="required">
+              <span class="bar"></span>
+              <label>City</label>
+            </div>
+
+            <div class="col-md-4 material-group">
+              <select class="material-control" id="country" name="country" required="required">
+                <option value="0" selected disabled>Country</option>
+                <option value="1">USA</option>
+                <option value="1">Ukraine</option>
+                <option value="1">France</option>
+              </select>
+              <span class="caret"></span>
+              <span class="bar"></span>
+            </div>
+
+            <div class="col-md-4 material-group">
+              <input type="text" class="material-control" placeholder="Postcode" name="zip" required="required">
+              <span class="bar"></span>
+              <label>Postcode</label>
+            </div>
+
+            <div class="col-md-6 material-group">
+              <input type="password" class="material-control" placeholder="Password" name="password" required="required" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+              <span class="bar"></span>
+              <label>Password</label>
+            </div>
+
+            <div class="col-md-6 material-group">
+              <input type="password" class="material-control" placeholder="Confirm Password" name="confirm_password" required="required" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+              <span class="bar"></span>
+              <label>Confirm Password</label>
+            </div>
+          </div>
+
+          <div class="form-submit-group">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="reset" class="btn btn-secondary">Discard Changes</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

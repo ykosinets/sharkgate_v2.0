@@ -1,0 +1,91 @@
+.page-cloudflare-keys {
+  form {
+    .icon-user-circle {
+      font-size: 80px;
+      color: $primary;
+      display: inline-block;
+      margin: 0 auto 30px;
+    }
+
+    label {
+      @extend .p;
+      font-weight: 600;
+    }
+
+    .form-description,
+    input {
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto 30px;
+    }
+
+    .form-description {
+      padding: 0 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      color: grey;
+      line-height: 1.2;
+      font-family: $eurostile;
+
+      small {
+        font-size: 16px;
+      }
+
+      .icon {
+        margin-right: 15px;
+        font-size: 36px;
+        color: $primary;
+      }
+    }
+  }
+
+  .link-field,
+  .link-description {
+    margin: 0 auto 50px;
+    text-align: center;
+    max-width: 415px;
+    width: 100%;
+    font-family: $eurostile;
+  }
+
+  .link-field {
+    background: $primary;
+    display: block;
+    color: $white;
+    border-radius: 25px;
+    padding: 30px 40px;
+    transition: .3s background-color ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $blue-900;
+    }
+
+    .h5 {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .p {
+      line-height: 1.2;
+      font-size: 1.125rem;
+    }
+  }
+
+  .link-description {
+    color: $grey;
+    margin-bottom: 0;
+
+    h5 {
+      margin-bottom: 25px;
+    }
+
+    p {
+      line-height: 1.2;
+      font-size: 1.125rem;
+    }
+  }
+}

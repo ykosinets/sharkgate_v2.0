@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+
+<body class="page-crypto" style="opacity: 0">
+${require('../components/scrollbar.html').default}
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title">
+          <span class="icon icon-crypto"></span>
+          <span>
+            Crypto
+            <span class="p d-block">Manage cryptography settings for your website</span>
+          </span>
+        </h3>
+      </div>
+
+      <div class="section-body text-grey">
+        <div class="section-body option">
+          <h3>SSL:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Encrypt communication to and from your website using SSL. <br>
+                It may take up to 24 hours after the site becomes active on Cloudflare for new certificates to issue.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="select-wrapper">
+                <select name="parents" id="cache-purge" class="form-control">
+                  <option value="0" selected>
+                    Full
+                  </option>
+                  <option value="1">Sample option</option>
+                  <option value="2">Another sample</option>
+                  <option value="3" disabled>Disabled option</option>
+                </select>
+                <span class="caret"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Authenticated Origin Pulls:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                TLS client certificate presented for authentication on origin pull.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox4" type="checkbox">
+                <label for="checkbox4"><span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Minimum TLS Version:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Only allow HTTPS connections from visitors that support the selected TLS protocol version or newer.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="select-wrapper">
+                <select name="keep" id="crypto-tls-version" class="form-control">
+                  <option value="0" selected>1.0</option>
+                  <option value="1">Sample option</option>
+                  <option value="2">Another sample</option>
+                  <option value="3" disabled>Disabled option</option>
+                </select>
+                <span class="caret"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Opportunistic Encryption:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Opportunistic Encryption allows browsers to benefit from the improved performance of HTTP/2 by letting
+                them know that your site is available over an encrypted connection. Browsers will continue to show
+                “http” in the address bar, not “https”.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox5" type="checkbox">
+                <label for="checkbox5"><span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Onion Routing:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Onion Routing allows routing traffic from legitimate users on the Tor network through Cloudflare’s onion
+                services rather than exit nodes, thereby improving privacy of the users and enabling more fine-grained
+                protection.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox2" type="checkbox">
+                <label for="checkbox2"><span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>TLS 1.3:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Enable the latest version of the TLS protocol for improved security and performance.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="select-wrapper">
+                <select name="keep" id="crypto-tls-switch" class="form-control">
+                  <option value="0" selected>On</option>
+                  <option value="1">Sample option</option>
+                  <option value="2">Another sample</option>
+                  <option value="3" disabled>Disabled option</option>
+                </select>
+                <span class="caret"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+      </div>
+    </section>
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

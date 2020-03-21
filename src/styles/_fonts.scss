@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+@font-face {
+  font-family: 'EurostileNextLTPro';
+  src: url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro.otf') format('opentype'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro.woff') format('woff'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro.ttf') format('truetype'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro.svg#EurostileNextLTPro') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EurostileNextLTPro';
+  src: url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-Regular.otf') format('opentype'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-Regular.woff') format('woff'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-Regular.ttf') format('truetype'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-Regular.svg#EurostileNextLTPro') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EurostileNextLTPro';
+  src: url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-SmBd.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-SmBd.otf') format('opentype'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-SmBd.woff') format('woff'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-SmBd.ttf') format('truetype'),
+  url('#{$path-font}/eurostileNextLTPro/EurostileNextLTPro-SmBd.svg#EurostileNextLTPro') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Saira';
+  src: url('#{$path-font}/saira/saira-regular.eot');
+  src: url('#{$path-font}/saira/saira-regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/saira/saira-regular.woff') format('woff'),
+  url('#{$path-font}/saira/saira-regular.woff2') format('woff2'),
+  url('#{$path-font}/saira/saira-regular.ttf') format('truetype'),
+  url('#{$path-font}/saira/saira-regular.svg#saira') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Saira';
+  src: url('#{$path-font}/saira/saira-medium.eot');
+  src: url('#{$path-font}/saira/saira-medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/saira/saira-medium.woff') format('woff'),
+  url('#{$path-font}/saira/saira-medium.woff2') format('woff2'),
+  url('#{$path-font}/saira/saira-medium.ttf') format('truetype'),
+  url('#{$path-font}/saira/saira-medium.svg#saira') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Saira';
+  src: url('#{$path-font}/saira/saira-semibold.eot');
+  src: url('#{$path-font}/saira/saira-semibold.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/saira/saira-semibold.woff') format('woff'),
+  url('#{$path-font}/saira/saira-semibold.woff2') format('woff2'),
+  url('#{$path-font}/saira/saira-semibold.ttf') format('truetype'),
+  url('#{$path-font}/saira/saira-semibold.svg#saira') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Saira';
+  src: url('#{$path-font}/saira/saira-bold.eot');
+  src: url('#{$path-font}/saira/saira-bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/saira/saira-bold.woff') format('woff'),
+  url('#{$path-font}/saira/saira-bold.woff2') format('woff2'),
+  url('#{$path-font}/saira/saira-bold.ttf') format('truetype'),
+  url('#{$path-font}/saira/saira-bold.svg#saira') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}

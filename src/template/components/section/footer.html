@@ -1,0 +1,57 @@
+<div class="section-footer">
+  <div class="section-footer-inner">
+    <div>
+      <span class="badge badge-warning">Provided by CloudFlare</span>
+    </div>
+
+    <ul class="list-unstyled">
+      <li>
+        <a href="#footerCollapseAPI"
+           class="collapsed"
+           data-toggle="collapse"
+           role="button"
+           aria-expanded="false"
+           aria-controls="footerCollapseAPI">API</a>
+      </li>
+
+      <li>
+        <a href="#footerCollapseHelp"
+           class="collapsed"
+           data-toggle="collapse"
+           role="button"
+           aria-expanded="false"
+           aria-controls="footerCollapseHelp">Help</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-help collapse" id="footerCollapseHelp">
+    <div class="section-help-inner">
+      <p>
+        <strong>What are Cloudfalre's <a href="#">Caching Levels</a>?</strong>
+      </p>
+
+      <p>You can set Cloudfalre's CDN to cache <a href="#">static content</a> according to these levels:</p>
+
+      <ul>
+        <li>
+          <strong>No Query String:</strong> Only deliver files from cache when there is no query string.
+        </li>
+
+        <li>
+          <strong>Ignore Query String:</strong> Deliver the same response to everyone independent of the query string.
+        </li>
+
+        <li>
+          <strong>Standard:</strong> Delivers a different response each time the query string changes.
+        </li>
+      </ul>
+
+      <p>We recommend using the Standard level. For more detail read our KB article
+        <a href="#">What are Cloudflare's Caching Levels?</a></p>
+
+      <p><strong>Note:</strong> by default, cloudflare does not cache HTML content. You can create a Page Rule to
+        <a href="#">cache static HTML content</a>.</p>
+    </div>
+  </div>
+</div>

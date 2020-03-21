@@ -1,0 +1,145 @@
+<div class="nav-pills-curves-wrapper slider-wrapper">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 721.51 41.37"
+       preserveAspectRatio="none">
+    <defs>
+      <style>
+        .cls-1 {
+          fill: url(#linear-gradient);
+        }
+
+        .cls-2 {
+          fill: #fff;
+        }
+      </style>
+      <linearGradient id="linear-gradient" x1="2.27" y1="21.18" x2="723.79" y2="21.18" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#b8c0ca"/>
+        <stop offset="0.5" stop-color="#fff"/>
+        <stop offset="1" stop-color="#b8c0ca"/>
+      </linearGradient>
+    </defs>
+    <path class="cls-1"
+          d="M721.51,1a62.2,62.2,0,0,0-39.9,14.6L668.23,26.77a62.2,62.2,0,0,1-39.9,14.6H93.18a62.2,62.2,0,0,1-39.9-14.6L39.9,15.6A62.2,62.2,0,0,0,0,1Z"/>
+    <path class="cls-2"
+          d="M721.51,0a73.3,73.3,0,0,0-39.9,11.44L668.23,20.2a73.3,73.3,0,0,1-39.9,11.44H93.18A73.3,73.3,0,0,1,53.28,20.2L39.9,11.44A73.3,73.3,0,0,0,0,0Z"/>
+  </svg>
+  <div class="slick-nav">
+    <button type="button" class="slick-prev">prev</button>
+    <button type="button" class="slick-next">next</button>
+  </div>
+
+  <div class="nav nav-pills-curves slider d-none" id="pills-tab" role="tablist">
+    <div class="nav-item" draggable="true">
+      <a class="nav-link active" data-toggle="pill" href="#pills-security" role="tab"
+         aria-controls="pills-security" aria-selected="true">
+        <span class="icon icon-shield"></span>SECURITY
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#pills-requests" role="tab"
+         aria-controls="pills-requests" aria-selected="false">
+        <span class="icon icon-question"></span>Requests
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#pills-bandwidth" role="tab"
+         aria-controls="pills-bandwidth" aria-selected="false">
+        <span class="icon icon-speedometer"></span>Bandwidth
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#pills-users" role="tab"
+         aria-controls="pills-users" aria-selected="false">
+        <span class="icon icon-user"></span>Unique Users
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-security" role="tabpanel" aria-labelledby="pills-security-tab">
+    <div class="row tile-list">
+      <div class="col-xl-4">
+        <div class="tile">
+          <div class="tile-inner">
+            <div class="tile-content">
+              <span class="icon icon-lock icon-bg-primary tile-icon"></span>
+
+              <p class="tile-title">Total Blocks</p>
+
+              <div class="counter">
+                27472
+              </div>
+
+              <p class="tile-text">Last Week</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-4">
+        <div class="tile">
+          <div class="tile-inner">
+            <div class="tile-content">
+            <span class="icon icon-bg-info tile-icon">
+              <img src="${require('../../../images/shark-fin.svg')}" alt="SharkGate">
+            </span>
+
+              <p class="tile-text">
+                <span class="d-none d-xl-inline">Total Attacks</span> Blocked
+                By SharkGate
+              </p>
+
+              <div class="counter">
+                2765
+              </div>
+
+              <p class="tile-text">Last Week</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-4">
+        <div class="tile">
+          <div class="tile-inner">
+            <div class="tile-content">
+            <span class="icon icon-bg-warning tile-icon">
+            <img src="${require('../../../images/cloud.svg')}" alt="cloudflare">
+          </span>
+
+              <p class="tile-text">
+                <span class="d-none d-xl-inline">Total Attacks</span> Blocked
+                By Cloudflare
+              </p>
+
+              <div class="counter">
+                3658
+              </div>
+
+              <p class="tile-text">Last Week</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-wrapper">
+      <canvas id="chart" class="chart"></canvas>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="pills-requests" role="tabpanel" aria-labelledby="pills-requests-tab">
+    ${require('../table/table.html').default}
+  </div>
+
+  <div class="tab-pane fade" id="pills-bandwidth" role="tabpanel" aria-labelledby="pills-bandwidth-tab">
+    ${require('../table/table.html').default}
+  </div>
+
+  <div class="tab-pane fade" id="pills-users" role="tabpanel" aria-labelledby="pills-users-tab">
+    ${require('../table/table.html').default}
+  </div>
+</div>

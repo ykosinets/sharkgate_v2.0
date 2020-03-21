@@ -1,0 +1,36 @@
+.modal {
+  form {
+    .material-group {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .custom-checkbox {
+      margin: 10px 0 0 0;
+
+      label {
+        cursor: pointer;
+      }
+    }
+
+    .btn {
+      margin-top: 20px;
+      min-width: 200px;
+      text-transform: uppercase;
+    }
+  }
+
+  &-backdrop{
+    background: rgba($black, 0);
+    transition: .3s background ease-in-out, .3s backdrop-filter ease-in-out;
+
+    &.show{
+      background: rgba($black, .5);
+
+      @supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
+        backdrop-filter: blur(20px);
+        background: rgba($black, .2);
+      }
+    }
+  }
+}

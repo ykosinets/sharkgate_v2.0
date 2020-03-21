@@ -1,0 +1,63 @@
+.page-support {
+  .link-tile {
+    color: $primary;
+    display: block;
+    text-decoration: none !important;
+    transition: .3s color ease-in-out;
+    text-align: center;
+    margin: 100px 0;
+
+    @include media-breakpoint-down(lg) {
+      margin: 50px 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin: 25px 0;
+    }
+
+    mark {
+      background: transparent;
+    }
+
+    &:hover {
+      color: $blue-900;
+
+      mark {
+        text-decoration: underline;
+      }
+    }
+
+    .icon {
+      display: block;
+      font-size: 100px;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 50px;
+      }
+    }
+
+    .h4,
+    .p {
+      display: block;
+    }
+
+    .h4 {
+      margin: 40px 0 0 0;
+
+      @include media-breakpoint-down(lg) {
+        margin: 20px 0 0 0;
+      }
+    }
+
+    .p {
+      color: $grey;
+      margin: 30px 0 0 0;
+      line-height: 1.2;
+      @include interpolate(font-size, md, lg, 16px, 18px);
+
+      @include media-breakpoint-down(md) {
+        margin: 15px 0 0 0;
+      }
+    }
+  }
+}

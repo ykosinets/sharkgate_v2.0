@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+
+<body class="page-overview" style="opacity: 0">
+${require('../components/scrollbar.html').default}
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-shield"></span>Protection</h3>
+      </div>
+
+      <div class="section-body section-circles">
+        <div class="row text-center">
+          <div class="col-md-4 circle-wrapper">
+            <div class="circle circle-warning inactive">
+              <div class="circle-inner">
+                <img src="${require('../../images/cloud.svg')}" alt="Cloudflare">
+                <span class="circle-title">Cloudflare</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="circle-label">Speed & Protection</p>
+              <button type="button" class="btn btn-lg btn-warning btn-bordered">ENABLE</button>
+            </div>
+          </div>
+
+          <div class="col-md-4 circle-wrapper">
+            <div class="circle circle-info inactive">
+              <div class="circle-inner">
+                <img src="${require('../../images/shark-fin.svg')}" alt="Sharkgate">
+                <span class="circle-title">SharkGate</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="circle-label">Speed & Protection</p>
+              <button type="button" class="btn btn-lg btn-info btn-bordered">ENABLE</button>
+            </div>
+          </div>
+
+          <div class="col-md-4 circle-wrapper">
+            <div class="circle circle-info circle-state inactive">
+              <div class="circle-inner">
+                <span class="icon icon-user"></span>
+                <p>Your Website</p>
+                <p class="percents">0%</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="circle-label">Speed & Protection</p>
+              <button type="button" class="btn btn-lg btn-info inactive btn-bordered">at <span>0%</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-body section-actions">
+        <h4 class="section-subtitle text-primary">Quick Actions</h4>
+
+        <div class="row text-center">
+          <div
+            class="col-sm-12 col-md-4 d-flex align-items-center flex-column justify-content-between mb-4 mb-xl-0">
+            <div class="circle-switcher btn btn-circle btn-bordered">
+              <input type="checkbox" id="cloudflare">
+              <label for="cloudflare">
+                <img src="${require('../../images/switcher.svg')}" alt="switcher">
+              </label>
+            </div>
+
+            <h4 class="mt-5">Under Attack Mode</h4>
+            <p>Activate SharkGate maximum security rules
+              plus show visitors a Cloudflare JavaScript
+              challenge when visiting your site.</p>
+          </div>
+
+          <div
+            class="col-sm-12 col-md-4 d-flex align-items-center flex-column justify-content-between mb-4 mb-xl-0">
+            <div class="circle-switcher btn btn-circle btn-bordered active">
+              <input type="checkbox" id="sharkgate">
+              <label for="sharkgate">
+                <img src="${require('../../images/switcher.svg')}" alt="switcher">
+              </label>
+            </div>
+
+            <h4 class="mt-5">Development Mode</h4>
+            <p>Activate SharkGate maximum security rules
+              plus show visitors a Cloudflare JavaScript
+              challenge when visiting your site.</p>
+          </div>
+
+          <div
+            class="col-sm-12 col-md-4 d-flex align-items-center flex-column justify-content-between">
+            <button class="btn-bordered btn btn-lg btn-info my-auto">
+              Purge All
+            </button>
+            <h4 class="mt-5">Purge All Caches</h4>
+            <p>Activate SharkGate maximum security rules
+              plus show visitors a Cloudflare JavaScript
+              challenge when visiting your site.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-graphic"></span>Statistic</h3>
+
+        <div class="select-wrapper text-primary">
+          <select class="form-control" name="ttl" id="ttl" title="">
+            <option value="0" selected disabled>Last Week</option>
+            <option value="1">Sample option</option>
+            <option value="2">Another sample</option>
+            <option value="3" disabled>Disabled option</option>
+          </select>
+          <span class="caret"></span>
+        </div>
+      </div>
+
+      <div class="section-body text-grey">
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <h3>Attacks Blocked</h3>
+            <span class="badge badge-primary">Provided by SharkGate</span>
+            <div class="chart-wrapper">
+              <canvas id="chart" class="chart"></canvas>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <h3>Attacks Blocked</h3>
+            <span class="badge badge-warning">Provided by Cloudflare</span>
+            <div class="chart-wrapper">
+              <canvas id="chart2" class="chart"></canvas>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <h3>Total Requests</h3>
+            <span class="badge badge-warning">Provided by Cloudflare</span>
+            <div class="chart-wrapper">
+              <canvas id="chart3" class="chart"></canvas>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <h3>Percent Cached</h3>
+            <span class="badge badge-warning">Provided by Cloudflare</span>
+            <div class="chart-wrapper">
+              <canvas id="chart4" class="chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a class="view-more" href="#">View More Analytics</a>
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

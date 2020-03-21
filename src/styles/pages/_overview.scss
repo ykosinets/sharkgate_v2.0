@@ -1,0 +1,15 @@
+.page-overview {
+  .section-actions {
+    color: $text;
+
+    .btn:not(.btn-circle) {
+      min-width: 160px;
+    }
+
+    p {
+      font-family: $lato;
+      line-height: 1.2;
+      @include interpolate(font-size, md, xl, 16px, 18px);
+    }
+  }
+}

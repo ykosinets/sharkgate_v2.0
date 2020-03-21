@@ -1,0 +1,123 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$icon-notebook: unicode(ea1b);
+$icon-envelop: unicode(ea1c);
+$icon-warning: unicode(ea1d);
+$icon-bill: unicode(ea1e);
+$icon-notice: unicode(ea1f);
+$icon-lock: unicode(ea20);
+$icon-dns-plus: unicode(ea21);
+$icon-key: unicode(ea22);
+$icon-question: unicode(ea23);
+$icon-info: unicode(ea24);
+$icon-user-circle: unicode(ea25);
+$icon-support: unicode(ea26);
+$icon-dns: unicode(ea27);
+$icon-crypto: unicode(ea28);
+$icon-triangle: unicode(ea29);
+$icon-dashboard: unicode(ea2a);
+$icon-network: unicode(ea2b);
+$icon-graphic: unicode(ea2c);
+$icon-speedometer: unicode(ea2d);
+$icon-user: unicode(ea2e);
+$icon-caching: unicode(ea2f);
+$icon-shield: unicode(ea30);
+$icon-scrape-shield: unicode(ea31);
+
+.icon-notebook::before {
+  content: $icon-notebook;
+}
+
+.icon-envelop::before {
+  content: $icon-envelop;
+}
+
+.icon-warning::before {
+  content: $icon-warning;
+}
+
+.icon-bill::before {
+  content: $icon-bill;
+}
+
+.icon-notice::before {
+  content: $icon-notice;
+}
+
+.icon-lock::before {
+  content: $icon-lock;
+}
+
+.icon-dns-plus::before {
+  content: $icon-dns-plus;
+}
+
+.icon-key::before {
+  content: $icon-key;
+}
+
+.icon-question::before {
+  content: $icon-question;
+}
+
+.icon-info::before {
+  content: $icon-info;
+}
+
+.icon-user-circle::before {
+  content: $icon-user-circle;
+}
+
+.icon-support::before {
+  content: $icon-support;
+}
+
+.icon-dns::before {
+  content: $icon-dns;
+}
+
+.icon-crypto::before {
+  content: $icon-crypto;
+}
+
+.icon-triangle::before {
+  content: $icon-triangle;
+}
+
+.icon-dashboard::before {
+  content: $icon-dashboard;
+}
+
+.icon-network::before {
+  content: $icon-network;
+}
+
+.icon-graphic::before {
+  content: $icon-graphic;
+}
+
+.icon-speedometer::before {
+  content: $icon-speedometer;
+}
+
+.icon-user::before {
+  content: $icon-user;
+}
+
+.icon-caching::before {
+  content: $icon-caching;
+}
+
+.icon-shield::before {
+  content: $icon-shield;
+}
+
+.icon-scrape-shield::before {
+  content: $icon-scrape-shield;
+}
+

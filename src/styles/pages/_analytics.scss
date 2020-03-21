@@ -1,0 +1,17 @@
+.page-analytics {
+  .chart-wrapper {
+    margin-bottom: 30px;
+
+    &:after {
+      padding-bottom: 20%;
+
+      @include media-breakpoint-down(sm){
+        padding-bottom: 50%;
+      }
+    }
+  }
+
+  .tab-content .tab-pane {
+    padding-bottom: 15px;
+  }
+}

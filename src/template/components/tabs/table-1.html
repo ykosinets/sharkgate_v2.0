@@ -1,0 +1,49 @@
+<div class="nav-pills-rise-wrapper slider-wrapper">
+  <div class="slick-nav">
+    <button type="button" class="slick-prev">prev</button>
+    <button type="button" class="slick-next">next</button>
+  </div>
+
+  <div class="nav nav-pills-rise slider" id="pills-tab" role="tablist">
+    <div class="nav-item">
+      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+         aria-controls="pills-home" aria-selected="true">
+        BLOCK VISITORS
+        FROM COUNTRIES
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+         aria-controls="pills-profile" aria-selected="false">
+        BLOCK VISITORS
+        FROM CONTINENTS
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+         aria-controls="pills-contact" aria-selected="false">
+        IP ACCESS RULES
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    ${require('../table/table.html').default}
+  </div>
+
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    ${require('../table/table.html').default}
+  </div>
+
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+    ${require('../dualbox/dualbox.html').default}
+    <div class="submit-group text-right mt-2">
+      <button type="submit" class="btn btn-primary btn-slim btn-round">SAVE CHANGES</button>
+      <button type="reset" class="btn btn-secondary btn-slim btn-round ml-1">DISCARD CHANGES</button>
+    </div>
+  </div>
+</div>

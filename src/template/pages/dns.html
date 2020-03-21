@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+
+<body class="page-dns" style="opacity: 0">
+${require('../components/scrollbar.html').default}
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-dns-plus"></span>Create DNS record</h3>
+      </div>
+
+      <div class="section-body">
+        <form action="/" autocomplete="on">
+          <div class="form-group">
+            <div class="select-wrapper">
+              <select class="form-control form-control-sm" name="type" id="type" title="">
+                <option value="0" selected disabled>Type</option>
+                <option value="1">Sample option</option>
+                <option value="2">Another sample</option>
+                <option value="3" disabled>Disabled option</option>
+              </select>
+              <span class="caret"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="IPv4 address">
+          </div>
+
+          <div class="form-group">
+            <div class="select-wrapper">
+              <select class="form-control form-control-sm" name="ttl" id="ttl" title="">
+                <option value="0" selected disabled>Automatic TTL</option>
+                <option value="1">Sample option</option>
+                <option value="2">Another sample</option>
+                <option value="3" disabled>Disabled option</option>
+              </select>
+              <span class="caret"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary text-nowrap" type="submit">+ Create DNS Record</button>
+          </div>
+        </form>
+      </div>
+
+      ${require('../components/section/footer.html').default}
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title">
+          <span class="icon icon-dns"></span>
+          <span>
+            DNS Records
+            <span class="p d-block">Manage your Domain Name System (DNS) settings</span>
+          </span>
+        </h3>
+      </div>
+
+      <div class="section-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Content</th>
+              <th>TTL</th>
+              <th>Proxy Status</th>
+              <th>Actions</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+              <td>A</td>
+              <td>anyheightdesk.com</td>
+              <td>74.50.56.84</td>
+              <td>
+                <div class="table-select">
+                  <select class="form-control" name="ttl" id="ttl-select-1">
+                    <option value="0" selected disabled>Auto</option>
+                    <option value="1">Sample option</option>
+                    <option value="2">Another sample</option>
+                    <option value="3" disabled>Disabled option</option>
+                  </select>
+                  <span class="caret"></span>
+                </div>
+              </td>
+              <td>DNS Only</td>
+              <td><button>&times;</button></td>
+            </tr>
+            <tr>
+              <td>A</td>
+              <td>anyheightdesk.com</td>
+              <td>74.50.56.84</td>
+              <td>
+                <div class="table-select">
+                  <select disabled class="form-control" name="ttl" id="ttl-select-2">
+                    <option value="0" selected disabled>Auto</option>
+                    <option value="1">Sample option</option>
+                    <option value="2">Another sample</option>
+                    <option value="3" disabled>Disabled option</option>
+                  </select>
+                  <span class="caret"></span>
+                </div>
+              </td>
+              <td>DNS Only</td>
+              <td><button>&times;</button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      ${require('../components/section/footer.html').default}
+    </section>
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

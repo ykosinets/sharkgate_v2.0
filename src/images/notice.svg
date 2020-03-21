@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <path id="notice" class="cls-1"
+            d="M30,2V30H2V2H30M16,6a1.5,1.5,0,1,0-1.5-1.5A1.5,1.5,0,0,0,16,6m1,9H27V8H17v7M5,9H15V8H5V9m0,3H15V11H5v1m0,3H15V14H5v1m0,3H27V17H5v1m0,3H27V20H5v1m0,3H27V23H5v1m0,3H27V26H5v1M30,0H2A2,2,0,0,0,0,2V30a2,2,0,0,0,2,2H30a2,2,0,0,0,2-2V2a2,2,0,0,0-2-2Z"/>
+</svg>

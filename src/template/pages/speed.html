@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+
+<body class="page-speed" style="opacity: 0">
+${require('../components/scrollbar.html').default}
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title">
+          <span class="icon icon-speedometer"></span>
+          <span>
+            Speed
+            <span class="p d-block">Manage performance settings for your website</span>
+          </span>
+        </h3>
+      </div>
+
+      <div class="section-body text-grey">
+        <div class="section-body option">
+          <h3>Auto Minify</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Reduce the file size of source code on your website.
+                Note: Purge cache to have your change
+                take effect immediately.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox1" type="checkbox">
+                <label for="checkbox1">JS <span class="switcher"></span></label>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="toggle-switcher">
+                <input id="checkbox2" type="checkbox">
+                <label for="checkbox2">CSS <span class="switcher"></span></label>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="toggle-switcher">
+                <input id="checkbox3" type="checkbox">
+                <label for="checkbox3">HTML <span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Mobile Redirect</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Redirect visitors that are using mobile devices
+                to a mobile-optimized website.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox4" type="checkbox">
+                <label for="checkbox4">Mobile Redirection <span class="switcher"></span></label>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="select-wrapper">
+                <select name="parents" id="parents" class="form-control">
+                  <option value="0" selected disabled>
+                    parentsclout.com
+                  </option>
+                  <option value="1">Sample option</option>
+                  <option value="2">Another sample</option>
+                  <option value="3" disabled>Disabled option</option>
+                </select>
+                <span class="caret"></span>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="select-wrapper">
+                <select name="keep" id="keep" class="form-control">
+                  <option value="0" selected disabled>Keep Path</option>
+                  <option value="1">Sample option</option>
+                  <option value="2">Another sample</option>
+                  <option value="3" disabled>Disabled option</option>
+                </select>
+                <span class="caret"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Brotli</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Speed up page load times for your visitor’s HTTPS traffic
+                by applying Brotli compression.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox5" type="checkbox">
+                <label for="checkbox5">Brotli compression <span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Rocket Loader</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Improve the paint time for pages that include Javascript.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox6" type="checkbox">
+                <label for="checkbox6">Rocket Loader <span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+      </div>
+    </section>
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+
+<body class="page-cloudflare-keys" style="opacity: 0">
+${require('../components/scrollbar.html').default}
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    ${require('../components/alert/primary.html').default}
+    ${require('../components/alert/success.html').default}
+
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <form action="/" autocomplete="on" class="text-center">
+              <span class="icon icon-user-circle"></span>
+
+              <div class="form-group">
+                <label class="text-primary" for="email">Cloudflare Email</label>
+                <input id="email" type="email" class="form-control">
+                <div class="form-description">
+                  <span class="icon icon-info"></span>
+                  <small>
+                    This is the email address you use
+                    to login to cloudflare with for your
+                    cloudflare account for parentsoutloud
+                  </small>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="text-primary" for="key">Cloudflare Global API Key</label>
+                <input id="key" type="text" class="form-control">
+                <div class="form-description">
+                  <span class="icon icon-info"></span>
+                  <small>
+                    Your Cloudflare API key allows our
+                    dashboard to connect to your cloudflare
+                    account for this site. See "where do I find my
+                    Cloudflare API key in the faq section below
+                  </small>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <a href="#" class="link-field">
+              <span class="h5">Don't have a Cloudflare account for your site?</span>
+              <span class="p">
+                CLICK HERE to go to the Cloudflare website and sign up for a FREE account.
+              </span>
+            </a>
+
+            <div class="link-description">
+              <h5>Rather we set it all up for you?</h5>
+              <p>
+                Talk to our support team on the chat box bottom right
+                and we can set your site up on Cloudflare all for you!
+                So you can sit back and relax whilst we do all the work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      ${require('../components/section/footer.html').default}
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-question"></span>Frequently Asked Questions</h3>
+      </div>
+
+      <div class="section-body">
+        <div class="row">
+          <div class="col-md-9">
+            <article>
+              <h4>Where do I find my Cloudflare API key?</h4>
+
+              <p>Login to your Cloudflare account for parentsoutloud.com</p>
+
+              <ul>
+                <li>Go to My Profile.</li>
+                <li>Scroll down to API Keys and locate Global API Key.</li>
+                <li>Click the View button on the API Key to see your API identifier</li>
+              </ul>
+
+              <p><a href="#">See a cloudflare article here explaining this same process</a></p>
+            </article>
+
+            <article>
+              <h4>
+                Can I use a Cloudflare 'FREE' account or do I need a paid one?
+              </h4>
+
+              <p>
+                You can use the SharkGate & Cloudflare integration with any type of Cloudflare account.
+              </p>
+
+              <p>
+                With the <a href="#">Cloudflare FREE account</a> linked to OneHourSiteFix's FIX & PROTECT plan by SharkGate
+                you get an amazing set of features. With Speed, basic DDos and tonnes more features from Cloudflare
+                PLUS the SharkGate firewall you have a winning combination for a FAST and SECURE site.
+              </p>
+
+              <p>
+                If you purchase a Cloudflare PAID account you get even more features from Cloudflare and SharkGate
+                firewall works perfectly with those as well. With SharkGate and CLoudflare working together
+                <a href="#">you really CAN have your cake and eat it</a>. 
+              </p>
+            </article>
+
+            <article>
+              <h4>
+                I dont understand this Cloudflare part and how to set it up. Can't you do it all for me?
+              </h4>
+
+              <p>
+                Absolutely! We are experts at setting sites up on Cloudflare so they work perfectly with SharkGate.
+                Just drop us a chat on the chat box bottom right or contact us on a ticket and our team can do
+                everything for you . We can create a cloudflare account , set up your site on it and link it up to
+                SharkGate and this dashboard, you can just sit back and relax and wait for us to tell you it is all sorted
+                :-)
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      ${require('../components/section/footer.html').default}
+    </section>
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

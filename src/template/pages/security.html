@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+
+<body class="page-security" style="opacity: 0">
+${require('../components/scrollbar.html').default}
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title"><span class="icon icon-shield"></span>Security</h3>
+
+        <div class="select-wrapper text-primary">
+          <select class="form-control" name="ttl" id="ttl" title="">
+            <option value="0" selected disabled>Select Week</option>
+            <option value="1">Sample option</option>
+            <option value="2">Another sample</option>
+            <option value="3" disabled>Disabled option</option>
+          </select>
+          <span class="caret"></span>
+        </div>
+      </div>
+
+      <div class="section-body">
+        <div class="d-flex flex-row flex-wrap flex-lg-nowrap mb-4">
+          <div class="cloudflare-title" role="tabpanel" aria-labelledby="Cloudflare">
+            <h4 class="text-grey d-inline-block">
+              Attacks Blocked by Cloudflare
+              <span class="subtitle d-block mt-2">Manage caching settings for your website</span>
+            </h4>
+          </div>
+
+          <div class="sharkgate-title d-none" role="tabpanel" aria-labelledby="SharkGate">
+            <h4 class="text-grey d-inline-block">
+              Attacks Blocked by SharkGate
+              <span class="subtitle d-block mt-2">Manage caching settings for your website</span>
+            </h4>
+          </div>
+
+          <div class="mr-0 ml-auto d-block d-lg-inline-block text-center text-lg-right">
+            <a class="btn btn-warning text-nowrap btn-cloudflare active"
+               data-toggle="pill"
+               href="#cloudflare"
+               role="tab"
+               aria-controls="cloudflare"
+               aria-selected="true">
+              <img src="${require('../../images/cloud.svg')}" alt="Cloudflare">
+              CloudFlare
+            </a>
+
+            <a class="btn btn-primary text-nowrap btn-sharkgate"
+               data-toggle="pill"
+               href="#sharkgate"
+               role="tab"
+               aria-controls="sharkgate"
+               aria-selected="false">
+              <img src="${require('../../images/shark-fin.svg')}" alt="SharkGate">
+              SharkGate
+            </a>
+          </div>
+        </div>
+
+        <div class="fade show active" id="sharkgate" role="tabpanel" aria-labelledby="SharkGate">
+          ${require('../components/table/table.html').default}
+        </div>
+
+        <div class="fade" id="cloudflare" role="tabpanel" aria-labelledby="SharkGate" style="display: none">
+          ${require('../components/table/table.html').default}
+        </div>
+      </div>
+
+      <div class="section-footer">
+        <div class="section-footer-inner">
+          <div>
+            <span class="badge badge-warning cloudflare-badge" role="tabpanel" aria-labelledby="Cloudflare">Provided by CloudFlare</span>
+            <span class="badge badge-primary sharkgate-badge d-none" role="tabpanel" aria-labelledby="SharkGate">Provided by SharkGate</span>
+          </div>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#footerCollapseAPI"
+                 class="collapsed"
+                 data-toggle="collapse"
+                 role="button"
+                 aria-expanded="false"
+                 aria-controls="footerCollapseAPI">API</a>
+            </li>
+
+            <li>
+              <a href="#footerCollapseHelp"
+                 class="collapsed"
+                 data-toggle="collapse"
+                 role="button"
+                 aria-expanded="false"
+                 aria-controls="footerCollapseHelp">Help</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-help collapse" id="footerCollapseHelp">
+          <div class="section-help-inner">
+            <p>
+              <strong>What are Cloudfalre's <a href="#">Caching Levels</a>?</strong>
+            </p>
+
+            <p>You can set Cloudfalre's CDN to cache <a href="#">static content</a> according to these levels:</p>
+
+            <ul>
+              <li>
+                <strong>No Query String:</strong> Only deliver files from cache when there is no query string.
+              </li>
+
+              <li>
+                <strong>Ignore Query String:</strong> Deliver the same response to everyone independent of the query string.
+              </li>
+
+              <li>
+                <strong>Standard:</strong> Delivers a different response each time the query string changes.
+              </li>
+            </ul>
+
+            <p>We recommend using the Standard level. For more detail read our KB article
+              <a href="#">What are Cloudflare's Caching Levels?</a></p>
+
+            <p><strong>Note:</strong> by default, cloudflare does not cache HTML content. You can create a Page Rule to
+              <a href="#">cache static HTML content</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title">
+          <span class="icon icon-lock"></span>
+          Blocking Visitors From Cybercrime Countries
+        </h3>
+      </div>
+
+      <div class="section-body">
+        ${require('../components/tabs/table-actives.html').default}
+      </div>
+
+      ${require('../components/section/footer.html').default}
+    </section>
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

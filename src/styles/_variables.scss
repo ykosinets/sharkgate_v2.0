@@ -1,0 +1,131 @@
+// fonts
+$eurostile: 'EurostileNextLTPro', sans-serif;
+$saira: 'Saira', sans-serif;
+$lato: 'Lato', sans-serif;
+
+// paths
+$path: (
+  font: '../fonts',
+  img: '../images'
+);
+
+$path-font: map-get($path, font);
+$path-img: map-get($path, img);
+// colors
+$indigo-600: #3949ab;
+$indigo-700: #303f9f;
+$indigo-800: #283593;
+$indigo-900: #1a237e;
+$indigo-a100: #8c9eff;
+$indigo-a200: #536dfe;
+$indigo-a400: #3d5afe;
+$indigo-a700: #304ffe;
+
+$blue-600: #1e88e5;
+$blue-700: #1976d2;
+$blue-800: #1565c0;
+$blue-900: #0d47a1;
+$blue-a100: #82b1ff;
+$blue-a200: #448aff;
+$blue-a400: #2979ff;
+$blue-a700: #2962ff;
+
+$nav-link-active-color: #086dcb;
+$page-content-background-color: #eef5fc;
+$nav-link-size: 50px;
+$inactive: #b6bec6;
+$grey: #777777;
+$success: #39dc00;
+$text: #565656;
+$info: $blue-a700;
+
+body {
+  background: rgba(#82b1ff, .99);
+}
+
+// states
+$state-active: '&:hover, &:focus, &:active, &:active:hover, &:active:focus';
+
+//3rd party assets
+//fontawesome
+$fa-font-path: '#{$path-font}/fontawesome';
+
+//nucleo icon font
+$icon-font-path: '#{$path-font}/nucleo';
+
+//flags icons
+$flag-icon-css-path: '#{$path-img}/flags';
+$flag-icon-rect-path: '/4x3';
+$flag-icon-square-path: '/1x1';
+
+//bootstrap
+$font-family-base: $saira;
+//bootstrap:grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920px
+);
+$border-radius: 70px;
+//bootstrap:colors
+$primary: #048ded;
+$warning: #ff9000;
+//bootstrap:button
+$btn-border-radius-sm: 25px;
+$btn-border-radius: 25px;
+$btn-border-radius-lg: 25px;
+$btn-padding-x-sm: 15px;
+//$btn-padding-x
+//$btn-padding-x-lg
+//$btn-padding-y-sm
+//$btn-padding-y
+//$btn-padding-y-lg
+$btn-font-weight: 600;
+$btn-font-family: $saira;
+//$btn-line-height-sm
+//$btn-line-height
+//$btn-line-height-lg
+$btn-font-size-sm: 15px;
+//$btn-font-size
+//$btn-font-size-lg
+$btn-disabled-opacity: 1;
+//$btn-focus-box-shadow;
+//bootstrap:badge
+$badge-font-weight: 500;
+$badge-font-family: $saira;
+$badge-font-size: 15px;
+$badge-border-radius: 20px;
+$badge-padding-x: 15px;
+$badge-padding-y: 7px;
+
+//bootstrap:dropdown
+$dropdown-border-radius: 16px;
+$dropdown-color: #000;
+$dropdown-padding-y: 11px;
+
+//bootstrap:pills/tabs
+$nav-pills-link-color: #9eb6c6;
+$nav-pills-link-active-color: #fff;
+$nav-pills-link-active-bg: $primary;
+$nav-pills-link-bg: transparent;
+
+$card-border-radius: 25px;
+$card-spacer-x: 15px;
+$card-spacer-y: 15px;
+
+//bootstrap:pills/modal
+$modal-content-border-radius: 25px;
+$modal-footer-border-width: 0;
+$modal-header-border-width: 0;
+$modal-content-border-width: 0;
+$modal-inner-padding: 2rem 2rem 2rem 2rem;
+$modal-header-padding: 2rem 0 0 0;
+$modal-content-box-shadow-xs: 0 1rem 1rem rgba(#0f0, 1);
+$modal-content-box-shadow-sm-up: 0 1rem 2rem rgba(#f00, 1);
+$modal-backdrop-opacity: 1;
+
+//bootstrap:controls
+$input-focus-box-shadow: 0 5px 17px 0 rgba(lighten($primary, 30%), .5);

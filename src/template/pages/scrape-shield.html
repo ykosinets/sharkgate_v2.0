@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('../components/head.html').default}
+
+<body class="page-scrape-shield" style="opacity: 0">
+${require('../components/scrollbar.html').default}
+${require('../components/sidebar/sidebar.html').default}
+
+<main>
+  <button class="toggle-sidebar-size-button d-none"></button>
+  <div class="page-content">
+    ${require('../components/header.html').default}
+
+    <section class="section">
+      <div class="section-header">
+        <h3 class="section-title">
+          <span class="icon icon-scrape-shield"></span>
+          Scrape Shield
+        </h3>
+      </div>
+
+      <div class="section-body text-grey">
+        <div class="section-body option">
+          <h3>Email Address Obfuscation:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Display obfuscated email addresses on your website to prevent harvesting by bots and spammers, without
+                visible changes to the address for human visitors.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox1" type="checkbox">
+                <label for="checkbox1"><span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Server-side Excludes:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Automatically hide specific content from disreputable visitors.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox2" type="checkbox">
+                <label for="checkbox2"><span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+
+        <div class="section-body option">
+          <h3>Hotlink Protection:</h3>
+          <div class="row">
+            <div class="col-xl-4">
+              <p>
+                Protect your images from off-site linking.
+              </p>
+            </div>
+
+            <div class="col-xl-8">
+              <div class="toggle-switcher">
+                <input id="checkbox3" type="checkbox">
+                <label for="checkbox3"><span class="switcher"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${require('../components/section/footer.html').default}
+      </div>
+    </section>
+  </div>
+
+  ${require('../components/footer.html').default}
+</main>
+
+</body>
+</html>

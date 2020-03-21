@@ -1,0 +1,41 @@
+:root {
+  --page-title-font-size: 1.875rem;
+}
+
+.page {
+  &-header {
+    position: relative;
+    padding: 0;
+    margin: var(--page-content-margin-y) 0;
+
+    ul {
+      font-size: 42px;
+
+      li {
+        margin: 0 0 0 40px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        a {
+          color: $inactive;
+          transition: .3s color ease-in-out;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  &-title {
+    margin: 0;
+    line-height: 1;
+    font-weight: 600;
+    font-family: $saira;
+    font-size: var(--page-title-font-size);
+    color: $blue-900;
+  }
+}

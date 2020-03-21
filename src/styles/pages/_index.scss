@@ -1,0 +1,234 @@
+.page-index {
+  position: relative;
+  background: $blue-900;
+  overflow: hidden !important;
+  max-height: 100%;
+  min-height: 0;
+
+  .trigger-menu-button {
+    pointer-events: auto;
+    min-width: 160px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  .toggle-menu-button {
+    margin: 0 0 0 auto;
+
+    span {
+      background: $white;
+    }
+  }
+
+  .container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .page-content {
+    position: relative;
+    z-index: 20;
+    background: transparent;
+    color: $white;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navigation-horizontal {
+    margin-top: 20px;
+    margin-bottom: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+      flex-direction: column;
+      margin-bottom: 0;
+      margin-top: 0;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      padding: 50px 15px;
+      will-change: transform;
+      opacity: 0;
+      pointer-events: none;
+      transition: .3s opacity ease-in-out;
+      background: rgba($black, .9);
+
+      @supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
+        backdrop-filter: blur(20px);
+        background: rgba($black, .2);
+      }
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+
+      a {
+        pointer-events: auto;
+      }
+    }
+
+    a {
+      pointer-events: auto;
+      white-space: nowrap;
+      text-transform: uppercase;
+
+      @include media-breakpoint-down(md) {
+        pointer-events: none;
+      }
+    }
+
+    .brand {
+      min-width: 200px;
+      max-width: 300px;
+      width: 100%;
+      margin-right: 30px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 15px;
+        min-width: 270px;
+        width: 270px;
+        margin-right: 0;
+      }
+
+      a {
+        display: block;
+        margin-top: -10px;
+        padding: 15px 0;
+      }
+    }
+
+    & ~ * .brand {
+      margin-bottom: 100px;
+      min-width: 270px;
+      max-width: 400px;
+      width: 100%;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: stretch;
+
+      @include media-breakpoint-down(md) {
+        justify-content: flex-end;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 50px;
+      }
+
+      li {
+        padding: 10px 0;
+        margin: 0;
+
+        @include media-breakpoint-down(sm) {
+          padding: 0;
+        }
+
+        &:first-child {
+          @include media-breakpoint-down(md) {
+            margin-top: auto;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+          margin-left: 10px;
+
+          @include media-breakpoint-down(md) {
+            margin-bottom: 0;
+            margin-top: auto;
+            margin-left: 0;
+          }
+
+          @include media-breakpoint-down(sm) {
+            margin-top: 30px;
+          }
+        }
+
+        a {
+          &:not(.btn) {
+            color: $white;
+            padding: 7px 17px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: stretch;
+            border-radius: 25px;
+            background: rgba($white, 0);
+            text-decoration: none !important;
+            transition: .3s background ease-in-out, .3s color ease-in-out;
+
+            &:hover {
+              background: rgba($white, .15);
+
+              @supports (backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px)) {
+                backdrop-filter: blur(2px);
+                background: rgba($white, .15);
+              }
+            }
+
+            @include media-breakpoint-down(lg) {
+              padding: 10px;
+            }
+
+            @include media-breakpoint-down(md) {
+              padding: 10px 20px;
+              font-size: 18px;
+              vertical-align: middle;
+              line-height: 1.5;
+
+              .far,
+              .fas {
+                margin-top: -4px;
+              }
+              .icon {
+                margin-top: -6px;
+              }
+            }
+          }
+
+          .fas,
+          .far,
+          .icon {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
