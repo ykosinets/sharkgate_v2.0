@@ -67,7 +67,7 @@
     "bootstrap": "^4.4.1",
     "bootstrap-duallistbox": "^3.0.6",
     "chart.js": "^2.9.3",
-    "datatables.net": "^1.10.20",
+    "datatables.net": "^1.11.3",
     "flag-icon-css": "^3.4.6",
     "jquery": "^3.4.1",
     "jvectormap-next": "^3.1.0",
